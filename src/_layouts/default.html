@@ -2,12 +2,21 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html>
-  <head>
+<html class="has-navbar-fixed-top">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
+    {% include _title.html %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }}</title>
+    <meta name="contact" data-encoded="{{site.data.contacts.email-encoded}}" data-key="{{site.data.contacts.email-key}}">
+    <script type="application/ld+json">
+    {% if site.data.services.industry and site.data.services.area-served.caption %}
+    {% include _meta-ld-Service.html %}
+    {% else %}
+    {% include _meta-ld-LocalBusiness.html %}
+    {% endif %}
+    </script>
+    {% include _meta-og-business.html %}
     {% asset style.css %}
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     {% if site.analytics-id %}

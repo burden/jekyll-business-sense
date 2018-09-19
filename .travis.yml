@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.4.2
+  - 2.5.1
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
@@ -14,7 +14,7 @@ before_script:
   - bower install
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproofer ./www
+  - bundle exec htmlproofer ./www --assume_extension --allow-hash-href --url-ignore "/facebook.com/,/burden.cc/"
 deploy:
   provider: pages # https://docs.travis-ci.com/user/deployment/pages/
   skip-cleanup: true

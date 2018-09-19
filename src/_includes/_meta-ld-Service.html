@@ -1,0 +1,39 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Service",
+  "serviceType": "{{ site.data.services.industry }}",
+  "areaServed":
+  {% if site.data.services.area-served.type == 'Text' %}
+  "{{ site.data.services.area-served.caption }}",
+  {% else %}
+  {
+    "@type": "{{ site.data.commitments.area-served.type}}",
+    "name": "{{ site.data.commitments.area-served.caption }}"
+  },
+  {% endif %}
+  "provider": {% include _meta-ld-LocalBusiness.html %},
+
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "{{ site.data.services.industry }}",
+    "itemListElement": [
+      {% for catalog in site.data.services.catalog  %}
+      {
+        "@type": "OfferCatalog",
+        "name": "{{ catalog.name }}",
+        "itemListElement": [
+          {% for offer in catalog.offers %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "{{ offer.name }}"
+            }
+          }{% unless catalog.offers.last == offer %},{% endunless %}
+          {% endfor %}
+        ]
+      }{% unless site.data.services.catalog.last == catalog %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}

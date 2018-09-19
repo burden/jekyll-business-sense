@@ -17,6 +17,8 @@
   ],
   "dependencies": {
     "jquery": "^3.2.1",
-    "bulma": "^0.7.1"
+    "bulma": "^0.7.1",
+    "gumshoe": "^3.5.1",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^14.2.1"
   }
 }

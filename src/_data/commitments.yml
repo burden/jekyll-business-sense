@@ -1,0 +1,32 @@
+summary: "After hours: appointments may be available upon request"
+always-open: false
+payment-accepted: Cash, Credit
+currencies-accepted: USD
+price-range: Excellent Value
+ld-hours:
+  - hours: "Mo-Fr 09:00-17:00"
+    caption: "Monday – Friday	9:00a – 5:00p"
+  - hours: "Sa-Su 12:00-20:00"
+    caption: "Weekends 12:00p - 8:00p"
+og-hours:
+  - day: monday
+    begin: "09:00:00"
+    end: "17:00:00"
+  - day: tuesday
+    begin: "09:00:00"
+    end: "17:00:00"
+  - day: wednesday
+    begin: "09:00:00"
+    end: "17:00:00"
+  - day: thursday
+    begin: "09:00:00"
+    end: "17:00:00"
+  - day: friday
+    begin: "09:00:00"
+    end: '17:00:00'
+  - day: saturday
+    begin: "12:00:00"
+    end: "20:00:00"
+  - day: sunday
+    begin: "12:00:00"
+    end: "20:00:00"

@@ -1,0 +1,32 @@
+<h2 class="title is-3 has-text-centered">Get in touch</h2>
+<form class="has-secret-action" action="https://formspree.io/" method="POST">
+  <input type="hidden" name="_next" value="{{ site.url | append: site.thanks }}" />
+  <div class="field">
+    <div class="control">
+      <input class="input" type="text" placeholder="Your name" name="name">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <input class="input" type="email" placeholder="Your email" name="email">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <input class="input" type="tel" placeholder="Your phone #">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <textarea class="textarea" type="text" placeholder="How can we help?"></textarea>
+    </div>
+  </div>
+  <div class="field is-grouped">
+    <p class="control">
+      <input class="button is-primary" type="submit" value="Send">
+    </p>
+    <p class="control">
+      <input class="button" type="reset" value="Reset">
+    </p>
+  </div>
+<form>

@@ -1,14 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+
+$family-sans-serif: 'Source Sans Pro', sans-serif;
+$input-focus-border-color: #fff;
+$primary: #397A8F;
+$link: $primary;
+$link-visited: darken($primary, 20%);
+$link-hover: lighten($primary, 10%);
+
 @import 'bulma/bulma';
 @import 'libs/mixins';
+@import 'libs/bulma-carousel';
 
 html {
   body {
     @include font-smoothing(on);
-  }
-  .burger {
-    color: $grey-dark;
-  }
-  .navbar-item{
-    font-size: 1em;
+
+    .modal-content {
+      width: $tablet !important;
+
+      @include from($tablet) {
+        width: $desktop !important;
+      }
+    }
+
+    nav {
+      .navbar-item{
+        font-size: 1em;
+        &.is-active {
+          color: $grey-dark;
+          font-weight: 600;
+          background-color: $white-ter !important;
+        }
+      }
+    }
+
+    .section {
+      padding: 1.5rem;
+      @include from($desktop) {
+        padding: 4rem 0 6rem 0;
+      }
+      h1.title {
+        @include from($desktop) {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+
+    .sunglasses {
+      background: linear-gradient(45deg, rgba($primary, 0.5) 0%, $primary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+    .section-hero {
+      background: url(https://images.unsplash.com/photo-1534024669648-7183524c6fbb?auto=format&fit=crop&w=1349&q=80);
+      background-color: #000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0px;
+      background-position: 0 0;
+      @include from($desktop) {
+        background-position: right 0px top -250px;
+      }
+
+
+      .column-display {
+
+        div {
+          height: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          align-content: flex-end;
+          justify-content: flex-start;
+
+          .title {
+            margin-top: .75rem;
+            width: 100%;
+            font-weight: 600;
+            color: #fff;
+          }
+
+          .subtitle {
+            width: 100%;
+            font-style: italic;
+            color: #fff;
+            padding: 0 0 1rem 0;
+          }
+        }
+      }
+
+      .column-form {
+        @include from($desktop) {
+          background-color: rgba(255,255,255, 0.75);
+        }
+        h2 {
+          padding-top: 1.5rem;
+          @include until($desktop) {
+            color: #fff;
+          }
+        }
+
+        form {
+          padding: 1rem 1rem;
+        }
+      }
+    }
+
+    .section-commitments {
+      padding: 0px;
+      a {
+        color: #fff;
+        &:hover {
+          border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+      }
+      .columns {
+        margin: 0px;
+        padding: 0px;
+
+        .column {
+          padding: 1.5rem 0px;
+          @include from($desktop) {
+            //padding: 60px;
+            padding: 4rem;
+          }
+          background-color: $primary;
+          color: #fff;
+          .icon {
+            color: #E4F2FA;
+          }
+          .title {
+            color: #fff;
+            font-weight: 300;
+            line-height: 3.25rem;
+            margin: 0px;
+          }
+          &.is-middle {
+            background-color: darken($primary, 3%);
+          }
+        }
+      }
+    }
+
+    .section-about {
+      .fbox {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        img {
+          border-radius: $radius;
+          height: 75%;
+          width: 100%;
+        }
+      }
+    }
+
+    .section-services {
+      background-color: $white-ter;
+      h2.title {
+        padding-bottom: .75rem;
+        margin: 4rem 0;
+        border-bottom: 1px solid $primary;
+      }
+      .content {
+
+      }
+      .box {
+        .title {
+          font-weight: 300;
+          color: $primary;
+        }
+      }
+    }
+
+    .section-testimonial {
+      background: url(https://images.unsplash.com/photo-1489465033131-30f7e2025f68?auto=format&fit=crop&w=1349&q=80);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .is-background {
+
+        &.testimonial {
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          color: #fff;
+          min-height: 300px;
+          max-height: 300px;
+
+          @include from($desktop) {
+            min-height: 200px;
+            max-height: 200px;
+          }
+
+          blockquote{
+            border-radius: $radius;
+            background-color: rgba(0,0,0,0.8);
+            padding: 1em;
+            p{
+              padding: 1.5rem 1rem;
+
+              @include until($desktop) {
+                font-size: 1rem;
+              }
+              @include from($desktop) {
+                font-size: 1.25rem;
+              }
+              &:before {
+                 content: "“";
+                 font-family: Georgia;
+                 font-size: 8rem;
+                 margin: -3rem 0 0 -1rem;
+                 position: absolute;
+                 opacity: 0.25;
+              }
+            }
+
+            cite {
+             line-height: 3rem;
+            }
+          }
+        }
+      }
+
+    }
+
+    .section-gallery {
+
+      .lightbox-image{
+        cursor: pointer;
+        border-radius: $radius;
+      }
+    }
   }
 }

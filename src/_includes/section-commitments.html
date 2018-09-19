@@ -1,0 +1,34 @@
+<section class="section section-commitments">
+  <div class="columns">
+    <div class="column is-4 has-text-centered">
+      <span class="icon is-large">
+        <i class="fas fa-3x fa-info-circle"></i>
+      </span><br>
+      <h2 class="title is-3">Contact</h2>
+      <p>Phone: {{ site.data.contacts.phone }}</p>
+      <p>Email: <a class="has-secret-email" target="_blank"></a></p>
+    </div>
+    <div class="column is-middle is-4 has-text-centered">
+      <span class="icon is-large">
+        <i class="far fa-3x fa-clock"></i>
+      </span><br>
+      <h2 class="title is-3">Hours of Operation</h2>
+      {% if site.data.commitments.ld-hours %}
+        {% for item in site.data.commitments.ld-hours %}
+        <p>{{ item.caption }}</p>
+        <meta itemprop="openingHours" content="{{ item.hours}}"/>
+        {% endfor %}
+      {% endif %}
+      <p>{{ site.data.commitments.summary }}</p>
+    </div>
+    <div class="column is-4 has-text-centered">
+      <span class="icon is-large">
+        <i class="far fa-3x fa-address-card"></i>
+      </span><br>
+      <h2 class="title is-3">Credentials</h2>
+      {% for cred in site.data.credentials %}
+      <p>{{ cred }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

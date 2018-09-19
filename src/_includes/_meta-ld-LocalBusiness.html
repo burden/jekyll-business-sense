@@ -1,0 +1,33 @@
+{
+  "@type":"LocalBusiness",
+  "@context":"http://schema.org",
+  "name":"{{ site.title }}",
+  "description":"{{ site.description }}",
+  {% if site.logo != '' %}
+  {% capture ld_image %}{% asset '{{ site.logo }}' @path %}{% endcapture %}
+  "image": "{{ ld_image | prepend: site.url }}",
+  {% endif %}
+  "url":"{{ site.url }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.data.contacts.address.city }}",
+    "addressRegion": "{{ site.data.contacts.address.state }}",
+    "streetAddress": "{{ site.data.contacts.address.street }}",
+    "postalCode": "{{ site.data.contacts.address.zip }}"
+  },
+  "telephone": "{{ site.data.contacts.phone }}",
+  "openingHours": [
+  {% if site.data.commitments.always-open == true %}
+    "Mo-Su 00:00-23:59"
+  {% else %}
+    {% if site.data.commitments.ld-hours %}
+      {% for item in site.data.commitments.ld-hours %}
+      "{{ item.hours}}"{% unless site.data.commitments.ld-hours.last == item %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+  ],
+  "priceRange": "{{ site.data.commitments.price-range }}",
+  "currenciesAccepted": "{{ site.data.commitments.currencies-accepted }}",
+  "paymentAccepted": "{{ site.data.commitments.payment-accepted }}"
+}

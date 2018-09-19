@@ -1,11 +1,42 @@
 <footer class="footer has-text-weight-light">
   <div class="container">
     <div class="content has-text-centered">
-      <p class="is-size-4">
-        <span class="has-text-weight-normal">{{ site.title }}</span> is maintained by {% for user in site.maintainers %}{% if site.maintainers.last == site.maintainers.first %}<a class="has-text-weight-normal" href="https://github.com/{{ user }}">@{{ user }}</a>{% else %}{% if site.maintainers.last == user %}and {% endif %}<a class="has-text-weight-normal" href="https://github.com/{{ user }}">@{{ user }}</a>{% unless site.maintainers.last == user %}, {% else %}.{% endunless %}{% endif %}{% endfor %}
+      <p class="is-size-6">
+        {% if site.data.contacts.email-key %}
+        <a class="has-secret-mailto" target="_blank">
+          <span class="icon is-medium">
+            <span class="fa-stack">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+          </span>
+        </a>
+        {% endif %}
+        {% if site.opengraph.fb-user %}
+        <a target="_blank" href="https://facebook.com/{{ site.opengraph.fb-user }}">
+          <span class="icon is-medium">
+            <span class="fa-stack">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </span>
+          </span>
+        </a>
+        {% endif %}
+        <br>
+        {% if site.data.contacts.phone %}
+        {{ site.data.contacts.phone }}
+        {% endif %}
       </p>
-      <p class="is-size-6"><span class="has-text-weight-bold">Support</span> {{ site.title }}</p>
-      <p><span class="has-text-weight-bold is-size-7">Visit our sponsor</span><br><a target="_blank" href="https://utensils.io" class="button is-inverted is-primary has-text-weight-bold is-medium">utensils.io</a></p>
+      <p itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="name" class="has-text-weight-normal">{{ site.title }}</span>
+        <span itemprop="streetAddress">{{ site.data.contacts.address.street }}</span>
+        <span itemprop="addressLocality">{{ site.data.contacts.address.city }}</span>,
+        <span itemprop="addressRegion">{{ site.data.contacts.address.state }}</span>
+        <span itemprop="postalCode">{{ site.data.contacts.address.zip }}</span>
+        <span itemprop="addressCountry">{{ site.data.contacts.address.country }}</span>
+      </p>
+      <p class="is-size-4"><span class="has-text-weight-normal">&copy; {{ site.title }}</span></p>
+      <p class="is-size-7"><a href="https://github.com/{{ site.github }}" class="button is-small"><span>view source</span><span class="icon"><i class="fab fa-github"></i></span></a></p>
     </div>
   </div>
 </footer>

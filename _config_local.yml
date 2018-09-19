@@ -1,0 +1,3 @@
+host: 0.0.0.0 # so we can share page on local network (ie: mobile device!)
+port: 4000
+url: "http://0.0.0.0:4000"

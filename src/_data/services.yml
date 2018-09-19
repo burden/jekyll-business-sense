@@ -1,0 +1,21 @@
+industry: Agam zril possit, accusata consetetur
+area-served:
+  type: Text # valid: Text, or Place (e.g. State, or City)
+  caption: Greater Area
+catalog:
+  - name: Agam zril possit
+    offers:
+      - name: Verear forensibus
+        description: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      - name: Pri in option
+        description: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      - name: Tempor disputationi
+        description: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+  - name: Accusata consetetur
+    offers:
+      - name: Prompta alienum
+        description: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      - name: Vivendo incorrupte
+        description: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      - name: Reque appellantur
+        description: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum

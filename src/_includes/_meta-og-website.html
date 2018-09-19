@@ -1,0 +1,10 @@
+{% if site.opengraph.fb-appid %}
+<meta property="fb:app_id" content="{{ site.opengraph.fb-appid }}" />
+{% endif %}
+<meta property="og:type" content="{{ include.type }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:title" content="{{ site.title }} - {{ _title }}" />
+{% capture facebook_image %}{% if site.opengraph.image %}{% asset '{{ site.opengraph.image }}' @path %}{% else %}{% asset '{{ site.logo }}' @path %}{% endif %}{% endcapture %}
+<meta property="og:image" content="{{ facebook_image | prepend: site.url }}" />

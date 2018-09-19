@@ -1,0 +1,15 @@
+- name: Satisfied Client 1
+  comments: Mi facilisis platea natoque eu, montes tincidunt nostra praesent ornare non sociis dignissim.
+  publish: true
+
+- name: Satisfied Client 2
+  comments: Viverra id tincidunt vestibulum auctor felis ut ad dapibus imperdiet cras, leo donec scelerisque nascetur elementum sed aliquet justo ridiculus, parturient conubia ante taciti eleifend non phasellus morbi libero
+  publish: false
+
+- name: Satisfied Client 3
+  comments: Etiam dignissim dapibus nisi maecenas nisl orci nostra semper, eu viverra diam pharetra proin interdum et, pretium fringilla sociis morbi metus malesuada commodo.
+  publish: true
+
+- name: Satisfied Client 4
+  comments: Lectus etiam duis suscipit tristique nullam porta leo nulla cum praesent metus auctor lacinia augue!
+  publish: true
