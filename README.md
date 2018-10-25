@@ -1,8 +1,11 @@
+[![Build Status](https://travis-ci.org/burden/jekyll-business-sense.svg?branch=master)](https://travis-ci.org/burden/jekyll-business-sense)
 # Jekyll Business Sense
 
 > A remarkable single page Jekyll theme for your small business, packed full of SERP tidbits.
 
 [Demo](http://jekyll-business-sense.burden.cc)
+
+![jekyll-business-sense](https://raw.githubusercontent.com/burden/jekyll-business-sense/master/thumb.jpg)
 
 ## Features
 - Rich results: [SiteNavigationElement](https://schema.org/SiteNavigationElement), [Service](https://schema.org/Service), [LocalBusiness](https://schema.org/LocalBusiness), [OfferCatalog](https://schema.org/OfferCatalog), [PostalAddress](https://schema.org/PostalAddress)
