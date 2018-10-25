@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/burden/jekyll-business-sense.svg?branch=master)](https://travis-ci.org/burden/jekyll-business-sense)
 # Jekyll Business Sense
 
 > A remarkable single page Jekyll theme for your small business, packed full of SERP tidbits.

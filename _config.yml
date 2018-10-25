@@ -1,12 +1,22 @@
 # Site Settings
+
+# Most search engines will truncate Page title to 65 characters.
 title: Jekyll Business Sense
+
+# Try to get up to 230 characters
+# Note that most search engines will truncate to 160 characters
 description: >-
   Proudly serving the community since 2018
-logo: jekyll-logo.png # store in src/_assets/images
+
+# used in LocalBusiness schema, and Open Graph
+# store in src/_assets/images
+logo: jekyll-logo.png
+
 opengraph:
   fb-appid:
   fb-user: jekyll-business-sense
-  image: # store in src/_assets/images
+  image: # override site.logo (store in src/_assets/images)
+
 url: "https://jekyll-business-sense.burden.cc" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 thanks: "/thanks" # after form submitted, send visitor here
