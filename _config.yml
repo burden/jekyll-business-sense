@@ -11,7 +11,7 @@ description: >-
 # used in LocalBusiness schema, and Open Graph
 # store in src/_assets/images
 logo: jekyll-logo.png
-
+analytics-id:
 opengraph:
   fb-appid:
   fb-user: jekyll-business-sense

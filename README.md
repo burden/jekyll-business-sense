@@ -15,7 +15,7 @@
 - Testimonials
 - Lightbox Photo Gallery
 - Obfuscated email address for spam protection
-- [Bulma 0.7.1](https://github.com/jgthms/bulma/tree/0.7.1)
+- [Bulma 0.7.4](https://github.com/jgthms/bulma/tree/0.7.4)
 - Dependency management: [bower](https://bower.io)
 - Asset pipeline: [jekyll-assets](https://rubygems.org/gems/jekyll-assets)
   - [JS uglifier](https://rubygems.org/gems/uglifier/versions/3.2.0)

@@ -4,6 +4,14 @@ layout: compress
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
+    {% if site.analytics-id %}
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
+      ga('create', '{{ site.analytics-id }}', 'auto');
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
     {% include _title.html %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,17 +27,7 @@ layout: compress
     </script>
     {% include _meta-og-business.html %}
     {% asset style.css %}
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    {% if site.analytics-id %}
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics-id }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.analytics-id }}');
-      </script>
-    {% endif %}
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script>
   </head>
   <body>
     {% include _nav.html %}
